@@ -23,3 +23,13 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+$factory->define(App\Sponsorable::class, function (Faker $faker) {
+    return [
+        'slug' => $faker->name,
+    ];
+});
+
+$factory->define(App\SponsorableSlot::class, function (Faker $faker) {
+    return [];
+});
