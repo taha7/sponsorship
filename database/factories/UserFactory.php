@@ -31,5 +31,7 @@ $factory->define(App\Sponsorable::class, function (Faker $faker) {
 });
 
 $factory->define(App\SponsorableSlot::class, function (Faker $faker) {
-    return [];
+    return [
+        'publish_date' => now()->addDays(5)
+    ];
 });
